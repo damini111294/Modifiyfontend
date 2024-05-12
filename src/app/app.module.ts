@@ -31,6 +31,7 @@ import { MycoursesComponent } from './components/mycourses/mycourses.component';
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 import { WelcomepageComponent } from './components/welcomepage/welcomepage.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { jobsComponent } from './components/jobs/jobs.component';
 
 @NgModule({
 
@@ -57,7 +58,8 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     MycoursesComponent,
     MywishlistComponent,
     WelcomepageComponent,
-    ResetpasswordComponent
+    ResetpasswordComponent,
+    jobsComponent
   ],
   
   imports: [
@@ -70,7 +72,7 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
     YouTubePlayerModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [ResetpasswordComponent],
+  providers: [ResetpasswordComponent,jobsComponent],
   bootstrap: [AppComponent, RegistrationComponent]
 })
 export class AppModule { }

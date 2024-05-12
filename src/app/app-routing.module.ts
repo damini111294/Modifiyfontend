@@ -26,11 +26,13 @@ import { ProfessorGuard } from './guards/professor.guard';
 import { RouterGuard } from './guards/router.guard';
 import { UserGuard } from './guards/user.guard';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { jobsComponent } from './components/jobs/jobs.component';
 
 const routes: Routes = [
   
   {path:'',component:WelcomepageComponent},
   {path:'login',component:LoginComponent},
+  {path:'jobs',component:jobsComponent},
   {path:'resetpassword',component:ResetpasswordComponent,pathMatch: 'full' },
   {path:'registration',component:RegistrationComponent},
   {path:'registrationsuccess',component:RegistrationsuccessComponent},
