@@ -7,6 +7,7 @@ describe('ProfessorprofileComponent', () => {
   let fixture: ComponentFixture<ProfessorprofileComponent>;
 
   beforeEach(async () => {
+
     await TestBed.configureTestingModule({
       declarations: [ ProfessorprofileComponent ]
     })
@@ -23,3 +24,4 @@ describe('ProfessorprofileComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

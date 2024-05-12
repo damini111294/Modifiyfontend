@@ -7,6 +7,7 @@ import { ProfessorService } from 'src/app/services/professor.service';
 import { RegistrationService } from 'src/app/services/registration.service';
 
 @Component({
+
   selector: 'app-addprofessor',
   templateUrl: './addprofessor.component.html',
   styleUrls: ['./addprofessor.component.css']
@@ -37,6 +38,7 @@ export class AddprofessorComponent implements OnInit {
     )
   }
   registerUser()
+  
   {
 
   }

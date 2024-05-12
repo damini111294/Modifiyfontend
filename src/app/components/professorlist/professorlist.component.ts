@@ -4,6 +4,7 @@ import { Professor } from 'src/app/models/professor';
 import { ProfessorService } from 'src/app/services/professor.service';
 
 @Component({
+
   selector: 'app-professorlist',
   templateUrl: './professorlist.component.html',
   styleUrls: ['./professorlist.component.css']
@@ -17,6 +18,8 @@ export class ProfessorlistComponent implements OnInit {
   constructor(private _service : ProfessorService) { }
 
   ngOnInit(): void 
+  
+
   {
     this.loggedUser = JSON.stringify(sessionStorage.getItem('loggedUser')|| '{}');
     this.loggedUser = this.loggedUser.replace(/"/g, '');

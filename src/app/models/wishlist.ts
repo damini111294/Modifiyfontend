@@ -1,5 +1,6 @@
 export class Wishlist 
 {
+    
     coursename : string = '';
     courseid : string = '';
     likeduser : string = '';
@@ -14,4 +15,5 @@ export class Wishlist
     description : string  = '';
 
     constructor() {}
+    
 }

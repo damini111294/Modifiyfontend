@@ -8,6 +8,7 @@
     padding: 3%;
 }
 .register-right{
+
     background: #ffffff;
     border-radius: 15px;
     box-shadow: 5px 5px 35px 8px rgb(147, 158, 147); 
@@ -68,6 +69,7 @@
     color: #413613;
 }
 #home-tab
+
 {
     background-color: none;
 }

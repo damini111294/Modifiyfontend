@@ -3,6 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { ProfessorGuard } from './professor.guard';
 
 describe('ProfessorGuard', () => {
+  
   let guard: ProfessorGuard;
 
   beforeEach(() => {
@@ -12,5 +13,6 @@ describe('ProfessorGuard', () => {
 
   it('should be created', () => {
     expect(guard).toBeTruthy();
+    
   });
 });

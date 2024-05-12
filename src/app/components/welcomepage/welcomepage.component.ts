@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
 
 @Component({
+  
   selector: 'app-welcomepage',
   templateUrl: './welcomepage.component.html',
   styleUrls: ['./welcomepage.component.css']

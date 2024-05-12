@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MywishlistComponent } from './mywishlist.component';
 
 describe('MywishlistComponent', () => {
+
   let component: MywishlistComponent;
   let fixture: ComponentFixture<MywishlistComponent>;
 
@@ -22,4 +23,5 @@ describe('MywishlistComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

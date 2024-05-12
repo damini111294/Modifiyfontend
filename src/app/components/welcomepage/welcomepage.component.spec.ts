@@ -3,10 +3,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { WelcomepageComponent } from './welcomepage.component';
 
 describe('WelcomepageComponent', () => {
+
   let component: WelcomepageComponent;
   let fixture: ComponentFixture<WelcomepageComponent>;
 
   beforeEach(async () => {
+    
     await TestBed.configureTestingModule({
       declarations: [ WelcomepageComponent ]
     })

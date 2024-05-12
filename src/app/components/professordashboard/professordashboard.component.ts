@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { AdminService } from 'src/app/services/admin.service';
 
 @Component({
+  
   selector: 'app-professordashboard',
   templateUrl: './professordashboard.component.html',
   styleUrls: ['./professordashboard.component.css']

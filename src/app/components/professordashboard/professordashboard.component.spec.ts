@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ProfessordashboardComponent } from './professordashboard.component';
 
 describe('ProfessordashboardComponent', () => {
+
   let component: ProfessordashboardComponent;
   let fixture: ComponentFixture<ProfessordashboardComponent>;
 
@@ -23,3 +24,4 @@ describe('ProfessordashboardComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

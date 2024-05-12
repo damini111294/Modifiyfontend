@@ -1,5 +1,6 @@
 export class Professor
 {
+
     professorname : string = '';
     professorid : string = 'empty';
     email : string = '';
@@ -13,4 +14,5 @@ export class Professor
     status : string = 'false';
 
     constructor() {}
+    
 }

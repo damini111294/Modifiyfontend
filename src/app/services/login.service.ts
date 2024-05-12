@@ -8,6 +8,7 @@ import { environment } from 'src/environments/environment';
 const NAV_URL = environment.apiURL;
 
 @Injectable({
+  
   providedIn: 'root'
 })
 export class LoginService {

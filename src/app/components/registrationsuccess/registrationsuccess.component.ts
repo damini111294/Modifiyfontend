@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
+  
   selector: 'app-registrationsuccess',
   templateUrl: './registrationsuccess.component.html',
   styleUrls: ['./registrationsuccess.component.css']

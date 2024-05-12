@@ -3,6 +3,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
@@ -29,8 +30,10 @@ import { AddchapterComponent } from './components/addchapter/addchapter.componen
 import { MycoursesComponent } from './components/mycourses/mycourses.component';
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 import { WelcomepageComponent } from './components/welcomepage/welcomepage.component';
+import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 
 @NgModule({
+
   declarations: [
     AppComponent,
     LoginComponent,
@@ -53,8 +56,10 @@ import { WelcomepageComponent } from './components/welcomepage/welcomepage.compo
     AddchapterComponent,
     MycoursesComponent,
     MywishlistComponent,
-    WelcomepageComponent
+    WelcomepageComponent,
+    ResetpasswordComponent
   ],
+  
   imports: [
     BrowserModule,
     FormsModule,
@@ -65,7 +70,7 @@ import { WelcomepageComponent } from './components/welcomepage/welcomepage.compo
     YouTubePlayerModule,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [ResetpasswordComponent],
   bootstrap: [AppComponent, RegistrationComponent]
 })
 export class AppModule { }

@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { LoginService } from '../services/login.service';
 
 @Injectable({
+
   providedIn: 'root'
 })
 export class RouterGuard implements CanActivate 
@@ -18,5 +19,6 @@ export class RouterGuard implements CanActivate
     this.router.navigate(['login']);
     return false;
   }
+  
   
 }

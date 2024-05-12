@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './admindashboard.component.html',
   styleUrls: ['./admindashboard.component.css']
 })
+
 export class AdmindashboardComponent implements OnInit {
 
   name = 'admin';

@@ -94,6 +94,7 @@ export class AddchapterComponent implements OnInit {
   }
 
   addChapters()
+  
   {
     this._service.addNewChapters(this.chapter).subscribe(
       data => {

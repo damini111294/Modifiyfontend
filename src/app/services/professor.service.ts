@@ -8,6 +8,7 @@ import { Course } from '../models/course';
 const NAV_URL = environment.apiURL;
 
 @Injectable({
+  
   providedIn: 'root'
 })
 export class ProfessorService 

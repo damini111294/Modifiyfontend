@@ -10,6 +10,7 @@ describe('ProfessorlistComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ProfessorlistComponent ]
     })
+
     .compileComponents();
   });
 
@@ -23,3 +24,4 @@ describe('ProfessorlistComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

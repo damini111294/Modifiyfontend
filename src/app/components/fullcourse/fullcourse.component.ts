@@ -10,6 +10,7 @@ declare var require: any;
 const FileSaver = require('file-saver');
 
 @Component({
+
   selector: 'app-fullcourse',
   templateUrl: './fullcourse.component.html',
   styleUrls: ['./fullcourse.component.css']
@@ -141,6 +142,7 @@ export class FullcourseComponent implements OnInit {
   }
 
   openChapter(chapterid : string)
+  
   {
     this.video = chapterid;
   }
@@ -158,7 +160,7 @@ export class FullcourseComponent implements OnInit {
 
   openDoc() {
     const pdfUrl = './assets/Introduction to Spring MVC.pdf';
-    window.open(pdfUrl + '#page=1', '_blank', '', true);
+    window.open(pdfUrl + '#page=1', '_blank', '');
   }
 
 }

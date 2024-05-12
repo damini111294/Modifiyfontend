@@ -5,6 +5,7 @@ import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
+  
   selector: 'app-userprofile',
   templateUrl: './userprofile.component.html',
   styleUrls: ['./userprofile.component.css']
@@ -55,7 +56,7 @@ export class UserprofileComponent implements OnInit {
         $("#message").show();
         this.temp = true;
         $("#profilecard").show();
-        $("#profileform").show();
+        $("#profileform").hide();
         setTimeout(() => {
             this._router.navigate(['/userdashboard']);
           }, 6000);

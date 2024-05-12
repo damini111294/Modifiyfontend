@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Merienda+One&family=Staatliches&display=swap');
 
 .sidebar{
+
     position: absolute;
     left: 0;
     top: 0;
@@ -298,4 +299,5 @@ letter-spacing: 1px;
 font-size: 20px;
 font-weight: 600;
 color: darkred;
+
 }
