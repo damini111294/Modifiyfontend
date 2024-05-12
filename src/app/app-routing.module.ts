@@ -25,11 +25,13 @@ import { AdminGuard } from './guards/admin.guard';
 import { ProfessorGuard } from './guards/professor.guard';
 import { RouterGuard } from './guards/router.guard';
 import { UserGuard } from './guards/user.guard';
+import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 
 const routes: Routes = [
   
   {path:'',component:WelcomepageComponent},
   {path:'login',component:LoginComponent},
+  {path:'resetpassword',component:ResetpasswordComponent,pathMatch: 'full' },
   {path:'registration',component:RegistrationComponent},
   {path:'registrationsuccess',component:RegistrationsuccessComponent},
   {path:'admindashboard',component:AdmindashboardComponent,canActivate:[AdminGuard]},

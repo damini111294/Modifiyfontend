@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   msg = "";
   adminEmail = "";
   adminPassword = "";
+console: any;
   
   constructor(private _service : LoginService, private _router : Router) { }
 
@@ -66,7 +67,10 @@ export class LoginComponent implements OnInit {
       $(".admin-login-form").hide();
     });
   }
-
+  handleClick() {
+    console.log('handleClick() method called');
+    console.log('Clicked forgot password');
+  }
   loginUser()
   
   {

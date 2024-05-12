@@ -160,7 +160,7 @@ export class FullcourseComponent implements OnInit {
 
   openDoc() {
     const pdfUrl = './assets/Introduction to Spring MVC.pdf';
-    window.open(pdfUrl + '#page=1', '_blank', '', true);
+    window.open(pdfUrl + '#page=1', '_blank', '');
   }
 
 }

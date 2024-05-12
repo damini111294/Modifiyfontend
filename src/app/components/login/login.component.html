@@ -36,11 +36,12 @@
     
           <div class="checkbox" style="margin-top: 5px;">
             <small style="color: gray;"><input type="checkbox" name="remember"> Remember me</small>
-            <small style="color: navy; margin-left: 42%; cursor: pointer;">forgot password?</small>
+            <small [routerLink]="['/resetpassword']" style="color: navy; margin-left: 35%; cursor: pointer;">forgot password?</small>
           </div>
           <button [disabled]="userloginform.form.invalid" type="submit" class="btn loginbtn">Login</button>
         </form>
-        <div class="sign-up" style=" text-align: center; margin-top: 10px;">Don't have an Account? <small [routerLink]="['/registration']" style="color: navy; text-align: center; cursor: pointer;"><b>Create One</b></small></div>
+        <div class="sign-up" style=" text-align: center; margin-top: 10px;">Don't have an Account? 
+          <small [routerLink]="['/registration']" style="color: navy; text-align: center; cursor: pointer;"><b>Create One</b></small></div>
         <hr>
         <p class="text-center mt-3"><b> or Login with </b></p>
             <div class="text-center">
@@ -84,7 +85,7 @@
          
                <div class="checkbox" style="margin-top: 5px;">
                  <small style="color: gray;"><input type="checkbox" name="remember"> Remember me</small>
-                 <small style="color: navy; margin-left: 42%; cursor: pointer;">forgot password?</small>
+                 <small [routerLink]="['/resetpassword']"style="color: navy; margin-left: 35%; cursor: pointer;">forgot password?</small>
                </div>
                <button [disabled]="professorloginform.form.invalid" type="submit" class="btn loginbtn">Login</button>
              </form>

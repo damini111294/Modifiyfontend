@@ -20,6 +20,10 @@ export class UserService {
   {
     return this._http.get<any>(`${NAV_URL}/userlist`);
   }
+  CreateTransaction(amount: number) : Observable<any>
+  {
+    return this._http.get<any>(`${NAV_URL}/createtransaction/`+amount);
+  }
 
   getYoutubeCourseList() : Observable<any>
   {

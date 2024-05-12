@@ -40,10 +40,13 @@ export class RegistrationComponent implements OnInit {
   {
     this._registrationService.registerUserFromRemote(this.user).subscribe(
       data => {
+        
         console.log("Registration Success");
         sessionStorage.setItem("username",this.user.username);
         sessionStorage.setItem("gender",this.user.gender);
+        console.log(this.user);
         this._router.navigate(['/registrationsuccess']);
+        
       },
       error => {
         console.log("Registration Failed");
