@@ -12,7 +12,7 @@
     margin-bottom: 3%; 
     border-radius: 10px; 
     box-shadow: 5px 5px 35px 8px rgb(147, 158, 147); 
-    border-top: 8px solid rgb(18, 10, 29); 
+    border-top: 8px solid rgb(22, 19, 27); 
     background-color: rgb(245, 234, 240);
 }
 input{
@@ -39,7 +39,7 @@ input{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: rgb(6, 6, 6);
     margin: auto;  
     border: 1px solid black;
     margin-top: 10px;
@@ -118,7 +118,7 @@ input{
     margin-left: 0px;
 }
 .headbtn1:hover, .headbtn2:hover, .headbtn3:hover{
-    background-color: rgb(42, 15, 15);
+    background-color: rgb(231, 166, 166);
 }
 
 .headbtn1{

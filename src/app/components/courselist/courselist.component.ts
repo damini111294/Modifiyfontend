@@ -110,6 +110,9 @@ backToCourseList()
 
 enrollcourse(course : Course, loggedUser : string, currRole : string)
 {
+
+
+
   this.enrollment.courseid = course.courseid;
   this.enrollment.coursename = course.coursename;
   this.enrollment.enrolledusertype = currRole;
@@ -137,6 +140,7 @@ enrollcourse(course : Course, loggedUser : string, currRole : string)
   },5000);
   this.userService.enrollNewCourse(this.enrollment,loggedUser,currRole).subscribe(
     data => {
+
       console.log("Course enrolled Successfully !!!");
     },
     error => {
@@ -222,20 +226,21 @@ gotoURL(url : string)
    nav: true
  }
 
- createTransactionandenrollcourse(data:string,loggedUser:string,currRole:string){
+ createTransactionandenrollcourse(course:Course,loggedUser:string,currRole:string){
   let amount=300;  
   this.userService.CreateTransaction(amount).subscribe(
     (Response) => {
       console.log(Response);
-      this.openTransactionMode(Response);
+      this.openTransactionMode(Response,course,loggedUser,currRole);
+      //this.enrollcourse(course , loggedUser , currRole )
     },
     (error)=>{
       console.log(error);
     }
-  );
+  );//if(Response){this.enrollcourse(course,loggedUser,currRole);}
  }
 
- openTransactionMode(response:any){
+ openTransactionMode(response:any,course:Course,loggedUser:string,currRole:string){
   var options={
     order_id:response.orderid,
     key:response.key,
@@ -246,11 +251,11 @@ gotoURL(url : string)
     image:'youtube.png',
     handler:(response:any)=>{
       if(response.razorpay_payment_id!=null){
-        this.processResponse(response);
+        this.processResponse(response,course,loggedUser,currRole);
       }else{
         alert("payment failed");
       }
-this.processResponse(response);
+this.processResponse(response,course,loggedUser,currRole);
     },
     prefill:{
       name:'LPY',
@@ -270,8 +275,9 @@ this.processResponse(response);
   
  }
 
- processResponse(reso :any){
+ processResponse(reso :any,course:Course,loggedUser:string,currRole:string){
   this.transactionid=reso.razorpay_payment_id
   console.log(reso);
+  this.enrollcourse(course, loggedUser, currRole);
  }
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { data } from 'jquery';
+import { Observable, observable } from 'rxjs';
 import { User } from 'src/app/models/user';
 import { UserService } from 'src/app/services/user.service';
 
@@ -12,12 +13,18 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserprofileComponent implements OnInit {
 
-  profileDetails : Observable<User[]> | undefined;
+ // profileDetails: any; // Define profileDetails variable to store fetched profile details
+  // loggedUser: string; // Define loggedUser variable to store the logged-in user's name
+  // user: any = {}; // Define user object to store profile update form data
+  temp: boolean = false;
+
+
+   profileDetails : Observable<User[]> | undefined;
   user: User = new User;
   msg = ' ';
   currRole = '';
-  loggedUser = '';
-  temp = false;
+   loggedUser = '';
+  // temp = false;
 
   constructor(private _service: UserService, private activatedRoute: ActivatedRoute, private _router : Router) { }
 
@@ -38,12 +45,27 @@ export class UserprofileComponent implements OnInit {
   {
     $("#profilecard").hide();
     $("#profileform").show();
+    this.getProfileDetails(this.user.email);
   }
 
   getProfileDetails(loggedUser : string)
   {
     this.profileDetails = this._service.getProfileDetails(this.loggedUser);
     console.log(this.profileDetails);
+    // this._service.getProfileDetails(loggedUser).subscribe(
+    //   (data: any) => {
+    //     this.profileDetails = data; // Assign fetched profile details to profileDetails variable
+    //   },
+    //   (error: any) => {
+    //     console.error('Error fetching profile details:', error);
+    //   }
+    // );
+
+
+    // this._service.getProfileDetails(loggedUser).subscribe((data: any) => {
+    //   this.user = data; // Assign fetched user data to the user object
+    //   console.log(this.user); // Check the fetched user data in console
+    // });
   }
 
   updateUserProfile()

@@ -32,12 +32,17 @@ import { MywishlistComponent } from './components/mywishlist/mywishlist.componen
 import { WelcomepageComponent } from './components/welcomepage/welcomepage.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { jobsComponent } from './components/jobs/jobs.component';
+import { referandearnComponent } from './components/referandearn/referandearn.component';
+import { aboutusComponent } from './components/aboutus/aboutus.component';
+import { tncComponent } from './components/tnc/tnc.component';
 
 @NgModule({
 
   declarations: [
     AppComponent,
     LoginComponent,
+    tncComponent,
+
     RegistrationComponent,
     RegistrationsuccessComponent,
     UserdashboardComponent,
@@ -59,7 +64,10 @@ import { jobsComponent } from './components/jobs/jobs.component';
     MywishlistComponent,
     WelcomepageComponent,
     ResetpasswordComponent,
-    jobsComponent
+    jobsComponent,
+    referandearnComponent,
+    aboutusComponent,
+    
   ],
   
   imports: [
@@ -70,7 +78,9 @@ import { jobsComponent } from './components/jobs/jobs.component';
     AppRoutingModule,
     CarouselModule,
     YouTubePlayerModule,
-    MDBBootstrapModule.forRoot()
+    tncComponent,
+    MDBBootstrapModule.forRoot(),
+    
   ],
   providers: [ResetpasswordComponent,jobsComponent],
   bootstrap: [AppComponent, RegistrationComponent]

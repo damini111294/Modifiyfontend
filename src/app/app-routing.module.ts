@@ -27,6 +27,9 @@ import { RouterGuard } from './guards/router.guard';
 import { UserGuard } from './guards/user.guard';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { jobsComponent } from './components/jobs/jobs.component';
+import { referandearnComponent } from './components/referandearn/referandearn.component';
+import { aboutusComponent } from './components/aboutus/aboutus.component';
+import { tncComponent } from './components/tnc/tnc.component';
 
 const routes: Routes = [
   
@@ -34,6 +37,12 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'jobs',component:jobsComponent},
   {path:'resetpassword',component:ResetpasswordComponent,pathMatch: 'full' },
+  {path:'referandearn',component:referandearnComponent },
+  {path:'aboutus',component:aboutusComponent },
+  {path:'tnc',component:tncComponent },
+
+
+
   {path:'registration',component:RegistrationComponent},
   {path:'registrationsuccess',component:RegistrationsuccessComponent},
   {path:'admindashboard',component:AdmindashboardComponent,canActivate:[AdminGuard]},
