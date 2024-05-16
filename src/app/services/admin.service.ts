@@ -7,6 +7,7 @@ import { Professor } from '../models/professor';
 const NAV_URL = environment.apiURL;
 
 @Injectable({
+  
   providedIn: 'root'
 })
 export class AdminService 

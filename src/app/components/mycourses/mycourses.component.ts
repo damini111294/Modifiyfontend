@@ -6,6 +6,7 @@ import { Enrollment } from 'src/app/models/enrollment';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
+
   selector: 'app-mycourses',
   templateUrl: './mycourses.component.html',
   styleUrls: ['./mycourses.component.css']
@@ -78,5 +79,6 @@ export class MycoursesComponent implements OnInit {
      },
      nav: true
    }
+   
 
 }

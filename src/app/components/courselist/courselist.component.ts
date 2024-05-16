@@ -1,7 +1,9 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 //import * as $ from 'jquery';
+
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import orders from 'razorpay/dist/types/orders';
 import { Observable } from 'rxjs';
 import { Course } from 'src/app/models/course';
 import { Enrollment } from 'src/app/models/enrollment';
@@ -9,6 +11,7 @@ import { Wishlist } from 'src/app/models/wishlist';
 import { ProfessorService } from 'src/app/services/professor.service';
 import { UserService } from 'src/app/services/user.service';
 declare var $: any;
+declare var Razorpay: any;
 
 @Component({
   selector: 'app-courselist',
@@ -34,12 +37,14 @@ export class CourselistComponent implements OnInit  {
   enrolledInstructorName = '';
   enrolledStatus : any;
   enrolledStatus2 = '';
+  transactionid='';
 
   @ViewChild('alertOne') alertOne: ElementRef | undefined;
   
   constructor(private _service : ProfessorService, private userService : UserService, private _router : Router) { }
 
  ngOnInit() 
+ 
  {
     this.loggedUser = JSON.stringify(sessionStorage.getItem('loggedUser')|| '{}');
     this.loggedUser = this.loggedUser.replace(/"/g, '');
@@ -105,6 +110,9 @@ backToCourseList()
 
 enrollcourse(course : Course, loggedUser : string, currRole : string)
 {
+
+
+
   this.enrollment.courseid = course.courseid;
   this.enrollment.coursename = course.coursename;
   this.enrollment.enrolledusertype = currRole;
@@ -132,6 +140,7 @@ enrollcourse(course : Course, loggedUser : string, currRole : string)
   },5000);
   this.userService.enrollNewCourse(this.enrollment,loggedUser,currRole).subscribe(
     data => {
+
       console.log("Course enrolled Successfully !!!");
     },
     error => {
@@ -217,4 +226,58 @@ gotoURL(url : string)
    nav: true
  }
 
+ createTransactionandenrollcourse(course:Course,loggedUser:string,currRole:string){
+  let amount=300;  
+  this.userService.CreateTransaction(amount).subscribe(
+    (Response) => {
+      console.log(Response);
+      this.openTransactionMode(Response,course,loggedUser,currRole);
+      //this.enrollcourse(course , loggedUser , currRole )
+    },
+    (error)=>{
+      console.log(error);
+    }
+  );//if(Response){this.enrollcourse(course,loggedUser,currRole);}
+ }
+
+ openTransactionMode(response:any,course:Course,loggedUser:string,currRole:string){
+  var options={
+    order_id:response.orderid,
+    key:response.key,
+    currency:response.currency,
+    amount:response.amount,
+    name:"learn tutiorial",
+    descripton:"tutorial fees",
+    image:'youtube.png',
+    handler:(response:any)=>{
+      if(response.razorpay_payment_id!=null){
+        this.processResponse(response,course,loggedUser,currRole);
+      }else{
+        alert("payment failed");
+      }
+this.processResponse(response,course,loggedUser,currRole);
+    },
+    prefill:{
+      name:'LPY',
+      email:'LPY@gmail.com',
+      contact:'909090909'
+    },
+    notes:{
+      address:"Online Shopping"
+    },
+    theme:{
+      color:'#F37254'
+    }
+  };
+
+  var razorpayObject=new Razorpay(options);
+  razorpayObject.open();
+  
+ }
+
+ processResponse(reso :any,course:Course,loggedUser:string,currRole:string){
+  this.transactionid=reso.razorpay_payment_id
+  console.log(reso);
+  this.enrollcourse(course, loggedUser, currRole);
+ }
 }

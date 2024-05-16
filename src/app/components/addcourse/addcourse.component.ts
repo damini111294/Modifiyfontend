@@ -5,6 +5,7 @@ import { ProfessorService } from 'src/app/services/professor.service';
 import * as $ from 'jquery';
 
 @Component({
+  
   selector: 'app-addcourse',
   templateUrl: './addcourse.component.html',
   styleUrls: ['./addcourse.component.css']

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Aladin&family=Merienda+One&family=Staatliches&display=swap');
 
 .register{
+
     background: white;
     margin-top: 0.8%;
     margin-bottom: 3%;
@@ -105,6 +106,7 @@
     color: #413613;
 }
 #home-tab
+
 {
     background-color: none;
 }

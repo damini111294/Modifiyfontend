@@ -5,6 +5,7 @@ import { LoginService } from '../services/login.service';
 
 @Injectable({
   providedIn: 'root'
+  
 })
 export class UserGuard implements CanActivate 
 {

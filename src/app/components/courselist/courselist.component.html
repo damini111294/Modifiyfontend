@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header> </app-header>
 
 <div id="youtubecoursecard" style="margin-left: 10%; margin-right: 10%; margin-top: 5%;">
   <div class="headtext">Courses with Youtube Videos</div>
@@ -21,6 +21,7 @@
           <a (click)="getcoursedetails(data.coursename)" style="margin-left: auto; margin-right: auto; border: none;" class="btn btn-primary">More Info</a>
         </div>
       </ng-template>
+      
       <!--<ng-template carouselSlide [id]="data.id">
         <img [src]="data.src" [alt]="data.alt" [title]="data.title">
       </ng-template>-->
@@ -71,8 +72,9 @@
     <p class="card-text"><br><b style="color: darkblue; font-size: large; margin-bottom: 1%;">{{data.description}}</b></p>
     <div *ngFor="let status of enrollmentstatus | async">
       <div *ngIf="status === 'notenrolled'" >
-        <a *ngIf="data.coursetype === 'Youtube'" (click)="enrollcourse(data,loggedUser,currRole)" id="enrollbtn" value="Accept" style="margin-right: 8%; margin-left: 3%" class="btn btn-primary">Enroll Now</a>
-        <a *ngIf="data.coursetype === 'Youtube'" id="enrolledbtn" class="btn btn-secondary" style="display: none; margin-right: 8%; margin-left: 7%;">Enrolled</a>
+        <a *ngIf="data.coursetype === 'Youtube'" (click)="createTransactionandenrollcourse(data,loggedUser,currRole)"  id="enrollbtn" value="Accept" style="margin-right: 8%; margin-left: 3%" class="btn btn-primary">Enroll Now</a>
+        <a *ngIf="data.coursetype === 'Youtube'"  id="enrolledbtn" class="btn btn-secondary" style="display: none; margin-right: 8%; margin-left: 7%;" >Enrolled</a>
+        
       </div>
       <div *ngIf="status === 'enrolled'" >
         <a *ngIf="data.coursetype === 'Youtube'" style="margin-right: 8%; margin-left: 7%;" class="btn btn-secondary">Enrolled</a>

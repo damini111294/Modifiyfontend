@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { LoginService } from '../services/login.service';
 
 @Injectable({
+  
   providedIn: 'root'
 })
 export class ProfessorGuard implements CanActivate 

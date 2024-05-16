@@ -1,5 +1,6 @@
 export class Enrollment 
 {
+    
     coursename : string = '';
     courseid : string = '';
     enrolleddate : string = '';

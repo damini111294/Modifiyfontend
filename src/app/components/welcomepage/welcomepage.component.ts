@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import * as $ from 'jquery';
 
 @Component({
+  
   selector: 'app-welcomepage',
   templateUrl: './welcomepage.component.html',
   styleUrls: ['./welcomepage.component.css']
@@ -49,6 +50,16 @@ export class WelcomepageComponent implements OnInit {
         $('#innertext3').slideUp(300);
       }
   }); 
+  $("#subtext5").click(function(){
+    $("#innertext5").slideToggle(300);
+    if($('#innertext1').is(':visible')||$('#innertext2').is(':visible')||$('#innertext3').is(':visible') ||$('#innertext4').is(':visible'))
+    {
+      $('#innertext1').slideUp(300);
+      $('#innertext2').slideUp(300);
+      $('#innertext3').slideUp(300);
+      $('#innertext4').slideUp(300);
+    }
+});
   }
 
   navigate()

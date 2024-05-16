@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddchapterComponent } from './components/addchapter/addchapter.component';
 import { AddcourseComponent } from './components/addcourse/addcourse.component';
 import { AddprofessorComponent } from './components/addprofessor/addprofessor.component';
+
 import { AdmindashboardComponent } from './components/admindashboard/admindashboard.component';
 import { ApprovalstatusComponent } from './components/approvalstatus/approvalstatus.component';
 import { CourselistComponent } from './components/courselist/courselist.component';
 import { FullcourseComponent } from './components/fullcourse/fullcourse.component';
 import { LoginComponent } from './components/login/login.component';
+
 import { MycoursesComponent } from './components/mycourses/mycourses.component';
 import { MywishlistComponent } from './components/mywishlist/mywishlist.component';
 import { ProfessordashboardComponent } from './components/professordashboard/professordashboard.component';
@@ -23,10 +25,36 @@ import { AdminGuard } from './guards/admin.guard';
 import { ProfessorGuard } from './guards/professor.guard';
 import { RouterGuard } from './guards/router.guard';
 import { UserGuard } from './guards/user.guard';
+import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
+import { jobsComponent } from './components/jobs/jobs.component';
+
+import { aboutusComponent } from './components/aboutus/aboutus.component';
+import { ReviewComponent } from './components/review/review.component';
+import { TermConditionComponent } from './components/term-condition/term-condition.component';
+import { PlacementsComponent } from './components/placements/placements.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { ReferEarnComponent } from './components/refer-earn/refer-earn.component';
+import { EventsComponent } from './components/events/events.component';
+
 
 const routes: Routes = [
+  
   {path:'',component:WelcomepageComponent},
   {path:'login',component:LoginComponent},
+  {path:'jobs',component:jobsComponent},
+  {path:'resetpassword',component:ResetpasswordComponent,pathMatch: 'full' },
+  
+  {path:'aboutus',component:aboutusComponent },
+  {path:'review',component:ReviewComponent },
+  {path:'termcondition',component:TermConditionComponent },
+  {path:'placements',component:PlacementsComponent },
+  {path:'referearn',component:ReferEarnComponent },
+  {path:'events',component:EventsComponent },
+  {path:'privacypolicy',component:PrivacyPolicyComponent },
+  
+
+
+
   {path:'registration',component:RegistrationComponent},
   {path:'registrationsuccess',component:RegistrationsuccessComponent},
   {path:'admindashboard',component:AdmindashboardComponent,canActivate:[AdminGuard]},
@@ -50,4 +78,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

@@ -3,10 +3,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CourselistComponent } from './courselist.component';
 
 describe('CourselistComponent', () => {
+
   let component: CourselistComponent;
   let fixture: ComponentFixture<CourselistComponent>;
 
   beforeEach(async () => {
+
     await TestBed.configureTestingModule({
       declarations: [ CourselistComponent ]
     })
@@ -21,5 +23,6 @@ describe('CourselistComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    
   });
 });

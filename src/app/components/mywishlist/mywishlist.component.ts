@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './mywishlist.component.html',
   styleUrls: ['./mywishlist.component.css']
 })
+
 export class MywishlistComponent implements OnInit {
 
   wishlist : Observable<Wishlist[]> | undefined;

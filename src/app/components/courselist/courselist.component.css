@@ -1,4 +1,5 @@
 .headtext
+
 {
    margin-bottom: 3%; 
    font-weight: bolder; 
@@ -24,6 +25,7 @@
    cursor: context-menu;
  }
  a{
+   
     text-decoration: none;
  }
  #enrollsuccessbtn:hover

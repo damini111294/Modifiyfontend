@@ -4,6 +4,7 @@ import { Professor } from 'src/app/models/professor';
 import { ProfessorService } from 'src/app/services/professor.service';
 
 @Component({
+
   selector: 'app-approvalstatus',
   templateUrl: './approvalstatus.component.html',
   styleUrls: ['./approvalstatus.component.css']
@@ -42,6 +43,7 @@ export class ApprovalstatusComponent implements OnInit {
   }
 
   acceptRequest(curremail : string)
+  
   {
     this.responses = this._service.acceptRequestForProfessorApproval(curremail);
     $("#acceptbtn").hide();

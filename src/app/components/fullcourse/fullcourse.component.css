@@ -7,6 +7,7 @@
     padding: 3%;
 }
 .chapter-list
+
 {
     margin-top: -36%;
     float: right;
@@ -30,6 +31,7 @@
     background: rgb(3, 54, 52);
   }
 #select-box
+
 {
     width: 25px; 
     height: 25px; 

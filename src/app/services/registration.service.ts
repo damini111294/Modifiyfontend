@@ -10,6 +10,7 @@ const NAV_URL = environment.apiURL;
 @Injectable({
   providedIn: 'root'
 })
+
 export class RegistrationService {
   user = new User();
   professor = new Professor();

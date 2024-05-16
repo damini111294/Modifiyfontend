@@ -9,6 +9,7 @@ import { Wishlist } from '../models/wishlist';
 const NAV_URL = environment.apiURL;
 
 @Injectable({
+  
   providedIn: 'root'
 })
 export class UserService {
@@ -18,6 +19,10 @@ export class UserService {
   getAllUsers() : Observable<any>
   {
     return this._http.get<any>(`${NAV_URL}/userlist`);
+  }
+  CreateTransaction(amount: number) : Observable<any>
+  {
+    return this._http.get<any>(`${NAV_URL}/createtransaction/`+amount);
   }
 
   getYoutubeCourseList() : Observable<any>

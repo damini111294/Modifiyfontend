@@ -7,6 +7,7 @@ describe('ApprovalstatusComponent', () => {
   let fixture: ComponentFixture<ApprovalstatusComponent>;
 
   beforeEach(async () => {
+
     await TestBed.configureTestingModule({
       declarations: [ ApprovalstatusComponent ]
     })
@@ -20,6 +21,7 @@ describe('ApprovalstatusComponent', () => {
   });
 
   it('should create', () => {
+    
     expect(component).toBeTruthy();
   });
 });

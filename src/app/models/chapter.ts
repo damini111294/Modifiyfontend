@@ -1,5 +1,6 @@
 export class Chapter 
 {
+    
     coursename : string  = '';
     chapter1name : string = '';
     chapter1id : string = '';

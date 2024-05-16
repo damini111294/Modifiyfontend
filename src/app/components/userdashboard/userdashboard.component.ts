@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { AdminService } from 'src/app/services/admin.service';
 
 @Component({
+
   selector: 'app-userdashboard',
   templateUrl: './userdashboard.component.html',
   styleUrls: ['./userdashboard.component.css']
@@ -44,6 +45,7 @@ export class UserdashboardComponent implements OnInit {
      }else {
       $("#btn").removeClass("fa-ellipsis-v").addClass("fa-bars");
      }
+     
     }
 
     this.courses = this._service.getTotalCourses();
