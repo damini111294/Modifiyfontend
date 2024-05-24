@@ -27,6 +27,11 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
 
-  }
+  },
+
+    "include": [
+     "src/**/*.ts",
+     "src/environments/environment.ts"
+    ]
   
 }

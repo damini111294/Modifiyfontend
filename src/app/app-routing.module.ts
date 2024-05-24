@@ -29,7 +29,7 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
 import { jobsComponent } from './components/jobs/jobs.component';
 
 import { aboutusComponent } from './components/aboutus/aboutus.component';
-import { ReviewComponent } from './components/review/review.component';
+import { ReviewComponent } from './review/review.component';
 import { TermConditionComponent } from './components/term-condition/term-condition.component';
 import { PlacementsComponent } from './components/placements/placements.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';

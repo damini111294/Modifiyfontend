@@ -37,7 +37,7 @@
                                 <small class="text-danger" [class.d-none]="userprofession.valid || userprofession.untouched"><b>required field</b></small>
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Password *" name="pwd" [(ngModel)]="user.password" required 
+                                <input type="password"class="form-control" placeholder="Password *" name="pwd" [(ngModel)]="user.password" required 
                                 #userpassword="ngModel"
                                 [class.is-invalid]="userpassword.invalid && userpassword.touched">
                                 <div *ngIf="userpassword.errors && userpassword.invalid && userpassword.touched">
@@ -48,7 +48,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="email address *" name="useremail" [(ngModel)]="user.email" required pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$"
+                                <input type="email" class="form-control" placeholder="email address *" name="useremail" [(ngModel)]="user.email" required pattern="[^ @]*@[^ @]*"
                                 #useremail="ngModel"
                                 [class.is-invalid]="useremail.invalid && useremail.touched">
                                 <div *ngIf="useremail.errors && (useremail.invalid && useremail.touched)">
@@ -160,6 +160,7 @@
                             <div class="form-group">
                                 <input type="password" class="form-control" placeholder="confirm password *" name="ConfirmPassword" (ngModel)="professor.password" required 
                                 #professorconfirmPassword="ngModel"
+                                
                                 [class.is-invalid]="professorconfirmPassword.invalid && professorconfirmPassword.touched">
                                 <small class="text-danger" [class.d-none]="(professorconfirmPassword.value == professorpassword.value) || professorconfirmPassword.untouched"><b>password not matched</b></small>
                             </div>

@@ -52,6 +52,7 @@ export class HeaderComponent implements OnInit {
     else if(this.currRole === "user"){
       this._router.navigate(['/userdashboard']);
     }
+    
   }
 
 

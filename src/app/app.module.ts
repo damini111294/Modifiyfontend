@@ -34,7 +34,7 @@ import { ResetpasswordComponent } from './components/resetpassword/resetpassword
 import { jobsComponent } from './components/jobs/jobs.component';
 import { aboutusComponent } from './components/aboutus/aboutus.component';
 import { EventsComponent } from './components/events/events.component';
-import { ReviewComponent } from './components/review/review.component';
+import { ReviewComponent } from './review/review.component';
 import { PlacementsComponent } from './components/placements/placements.component';
 import { ReferEarnComponent } from './components/refer-earn/refer-earn.component';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
